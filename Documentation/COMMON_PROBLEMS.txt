@@ -1,0 +1,5 @@
+Cannot find module `.\debug'
+=> Run command: "rm -rf node_modules; npm cache clear; npm install"
+
+ERROR: No bundle URL present
+=> Run command: "rm -rf ios/build/; kill $(lsof -t -i:8081); react-native run-ios"
