@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {
+  Hyperlink,
   StyleSheet,
   View,
   Text,
@@ -13,7 +14,7 @@ export default class Logo extends Component {
     return (
       <View style={styles.container}>
         <Image source={logoImg} style={styles.image} />
-        <Text style={styles.text}>REACT NATIVE</Text>
+        <Text style={styles.text}>GAO SHI QING</Text>
       </View>
     );
   }
@@ -26,13 +27,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
   },
   text: {
     color: 'white',
     fontWeight: 'bold',
     backgroundColor: 'transparent',
     marginTop: 20,
+    fontSize: 25,
   }
 });

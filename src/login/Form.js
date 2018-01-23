@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   KeyboardAvoidingView,
@@ -23,7 +23,9 @@ export default class Form extends Component {
   }
 
   showPass() {
-    this.state.press === false ? this.setState({ showPass: false, press: true }) :this.setState({ showPass: true, press: false });
+    this.state.press === false ?
+      this.setState({ showPass: false, press: true }):
+      this.setState({ showPass: true, press: false });
   }
 
   render() {
@@ -60,12 +62,12 @@ const styles = StyleSheet.create({
   },
   btnEye: {
     position: 'absolute',
-    top: 55,
+    top: 63,
     right: 28,
   },
   iconEye: {
     width: 25,
-    height: 25,
+    height: 28,
     tintColor: 'rgba(0,0,0,0.2)',
   },
 });
