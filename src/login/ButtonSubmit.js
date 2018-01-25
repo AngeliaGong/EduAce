@@ -29,6 +29,8 @@ export default class ButtonSubmit extends Component {
   }
 
   _onPress() {
+    var {navigate} = this.props.navigation;
+
     if (this.state.isLoading) return;
 
     this.setState({ isLoading: true });
@@ -50,6 +52,8 @@ export default class ButtonSubmit extends Component {
       this.buttonAnimated.setValue(0);
       this.growAnimated.setValue(0);
     }, 2300);
+
+    navigate('Home');
   }
 
   _onGrow() {

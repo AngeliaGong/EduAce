@@ -13,11 +13,18 @@ import passwordImg from './img/password.png';
 import eyeImg  from './img/eye_black.png';
 
 export default class Form extends Component {
+  state = {
+    username:'',
+    password:'',
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       showPass: true,
       press: false,
+      username: 'Username',
+      password: 'Password',
     };
     this.showPass = this.showPass.bind(this);
   }
@@ -32,14 +39,17 @@ export default class Form extends Component {
     return (
       <KeyboardAvoidingView behavior='padding'
                             style={styles.container}>
+
         <UserInput source={usernameImg}
-                   placeholder='Username'
+                   placeholder={this.state.username}
+                   onChangeText={username => this.setState({username})}
                    autoCapitalize={'none'}
                    returnKeyType={'done'}
                    autoCorrect={false} />
         <UserInput source={passwordImg}
                    secureTextEntry={this.state.showPass}
-                   placeholder='Password'
+                   placeholder={this.state.password}
+                   onChangeText={password => this.setState({password})}
                    returnKeyType={'done'}
                    autoCapitalize={'none'}
                    autoCorrect={false} />

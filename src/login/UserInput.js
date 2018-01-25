@@ -18,6 +18,7 @@ export default class UserInput extends Component {
                style={styles.inlineImg} />
         <TextInput style={styles.input}
                    placeholder={this.props.placeholder}
+                   value={this.props.value}
                    secureTextEntry={this.props.secureTextEntry}
                    autoCorrect={this.props.autoCorrect}
                    autoCapitalize={this.props.autoCapitalize}
