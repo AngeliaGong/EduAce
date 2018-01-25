@@ -15,12 +15,13 @@ import SignupSection from './SignupSection'
 import ButtonSubmit from './ButtonSubmit.js'
 
 export default class Login extends Component {
+
   render() {
     return (
       <View style={styles.container}>
         <Logo />
         <Form />
-        <ButtonSubmit />
+        <ButtonSubmit navigation={this.props.navigation}/>
         <SignupSection/>
       </View>
     );
