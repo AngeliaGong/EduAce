@@ -9,16 +9,15 @@ import {
   Image,
   View,
 } from 'react-native';
-
+import { StackNavigator, TabNavigator } from 'react-navigation';
 import spinner from './img/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const MARGIN = 40;
 
 export default class ButtonSubmit extends Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     this.state = {
       isLoading: false,
     };
