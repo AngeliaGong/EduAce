@@ -17,6 +17,7 @@ export default class UserInput extends Component {
         <Image source={this.props.source}
                style={styles.inlineImg} />
         <TextInput style={styles.input}
+                   onChangeText={(txt) => this.props.onChangeText(txt)}
                    placeholder={this.props.placeholder}
                    value={this.props.value}
                    secureTextEntry={this.props.secureTextEntry}

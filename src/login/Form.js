@@ -13,10 +13,6 @@ import passwordImg from './img/password.png';
 import eyeImg  from './img/eye_black.png';
 
 export default class Form extends Component {
-  state = {
-    username:'',
-    password:'',
-  }
 
   constructor(props) {
     super(props);
@@ -42,14 +38,16 @@ export default class Form extends Component {
 
         <UserInput source={usernameImg}
                    placeholder={this.state.username}
-                   onChangeText={username => this.setState({username})}
+                   onChangeText={(username) => {this.setState({username});
+                                              this.props.setUsername(username)}}
                    autoCapitalize={'none'}
                    returnKeyType={'done'}
                    autoCorrect={false} />
         <UserInput source={passwordImg}
                    secureTextEntry={this.state.showPass}
                    placeholder={this.state.password}
-                   onChangeText={password => this.setState({password})}
+                   onChangeText={(password) => {this.setState({password});
+                                              this.props.setPassword(password)}}
                    returnKeyType={'done'}
                    autoCapitalize={'none'}
                    autoCorrect={false} />

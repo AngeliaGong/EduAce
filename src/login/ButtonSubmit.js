@@ -52,7 +52,10 @@ export default class ButtonSubmit extends Component {
       this.growAnimated.setValue(0);
     }, 2300);
 
-    navigate('Home');
+    
+    this.props.onPress();
+
+    //navigate('Home');
   }
 
   _onGrow() {
